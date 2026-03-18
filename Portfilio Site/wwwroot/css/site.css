@@ -22,3 +22,56 @@ section {
     background: #0dcaf0;
     border-radius: 5px;
 }
+
+/* 1. Define the continuous "running" keyframe animation */
+@keyframes breathingGlow {
+    0% {
+        border-color: rgba(13, 202, 240, 0.3);
+        box-shadow: 0 0 5px rgba(13, 202, 240, 0.05);
+    }
+
+    50% {
+        border-color: rgba(13, 202, 240, 1);
+        box-shadow: 0 0 20px rgba(13, 202, 240, 0.4); /* Cyan glow */
+    }
+
+    100% {
+        border-color: rgba(13, 202, 240, 0.3);
+        box-shadow: 0 0 5px rgba(13, 202, 240, 0.05);
+    }
+}
+
+/* 2. Apply it to your skill cards */
+.skill-card {
+    /* 3s duration, runs infinitely, smoothly alternating */
+    animation: breathingGlow 3s infinite ease-in-out;
+    transition: transform 0.3s ease; /* Keep the smooth lift for hover */
+}
+
+/* Optional: Stagger the running animation so they don't all pulse at the exact same time! */
+.col-md-4:nth-child(2) .skill-card {
+    animation-delay: 0.5s;
+}
+
+.col-md-4:nth-child(3) .skill-card {
+    animation-delay: 1.0s;
+}
+
+.col-md-4:nth-child(4) .skill-card {
+    animation-delay: 1.5s;
+}
+
+.col-md-4:nth-child(5) .skill-card {
+    animation-delay: 2.0s;
+}
+
+.col-md-4:nth-child(6) .skill-card {
+    animation-delay: 2.5s;
+}
+
+/* 3. Make it pop even more when the user hovers over it */
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02); /* Lifts and slightly enlarges */
+    animation-play-state: paused; /* Pauses the breathing while hovering */
+    box-shadow: 0 15px 30px rgba(13, 202, 240, 0.8) !important; /* Maximum glow */
+}

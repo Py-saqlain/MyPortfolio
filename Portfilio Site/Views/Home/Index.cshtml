@@ -1,8 +1,81 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<Portfilio_Site.Models.ProjectModel>
+
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section id="hero" class="d-flex align-items-center justify-content-center text-center min-vh-100">
+    <div class="container" data-aos="fade-up" data-aos-duration="1500">
+        <h1 class="display-3 fw-bold text-info">Hi, I'm Saqlain Rashid</h1>
+        <h2 class="text-light mb-4">Software Engineer Mastering in Machine learning & .NET Development</h2>
+        <p class="lead text-secondary w-75 mx-auto mb-5">
+            I love solving complex problems and building robust applications. Welcome to my digital workspace.
+        </p>
+        <a href="#projects" class="btn btn-outline-info btn-lg px-4 me-md-2">View My Work</a>
+        <a href="#contact" class="btn btn-info btn-lg px-4 text-dark">Contact Me</a>
+    </div>
+</section>
+
+<section id="skills" class="min-vh-100 d-flex flex-column justify-content-center py-5">
+    <div class="container">
+        <h2 class="text-info border-bottom border-secondary pb-2 mb-5" data-aos="fade-right">My Skills</h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="card text-bg-dark border-info h-100 shadow skill-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Generative AI & LLMs</h4>
+                        <p class="card-text">LangChain, LangGraph, RAG, OpenAI API, Prompt Engineering, FAISS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="card text-bg-dark border-info h-100 shadow skill-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Deep Learning</h4>
+                        <p class="card-text">TensorFlow, CNNs, LSTMs, GRUs, scikit-learn, Time-Series Classification</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card text-bg-dark border-info h-100 shadow skill-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Languages</h4>
+                        <p class="card-text">Python, C#, C++, C, JavaScript, SQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="card text-bg-dark border-info h-100 shadow skill-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Backend & APIs</h4>
+                        <p class="card-text">.NET 8, C#, ASP.NET Core, FastAPI, REST APIs, Python</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="card text-bg-dark border-info h-100 shadow skill-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Frontend</h4>
+                        <p class="card-text">HTML5, CSS3, Bootstrap 5, JavaScript</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card text-bg-dark border-info h-100 shadow skill-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Tools & Deployment</h4>
+                        <p class="card-text">Streamlit, HuggingFace Spaces, Git/GitHub</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
