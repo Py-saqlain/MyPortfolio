@@ -15,7 +15,7 @@ namespace Portfilio_Site.Controllers
                 {
                     Id = 1,
                     Title = "Customer Support Bot",
-                    Description = "Built a production-ready customer support chatbot with multi-turn memory and intent-aware responses using LangChain\r\nand GroqAPI & Integrated FAISS vector store for FAQ retrieval.\r\n• Deployed live on Streamlit with HuggingFace Spaces hosting",
+                    Description = "Built a production-ready customer support chatbot with multi-turn memory and intent-aware responses using LangChain\r\nand GroqAPI & Integrated FAISS vector store for FAQ retrieval.\r\n Deployed live on Streamlit with HuggingFace Spaces hosting.",
                     TechStack = "Python, LangChain, GroqAPI, Streamlit, HuggingFace Spaces",
                     GithubLink = "https://github.com/Py-saqlain/Customer-support-bot"
                 },
@@ -23,7 +23,7 @@ namespace Portfilio_Site.Controllers
                 {
                     Id = 2,
                     Title = "Movie Recap App",
-                    Description = "Built end-to-end RAG pipeline automating scene detection and recap generation from raw video using semantic content\r\nanalysis.\r\n• Integrated FAISS vector storage for scene embedding retrieval — deployed on HuggingFace Spaces.\r\n",
+                    Description = "Built end-to-end RAG pipeline automating scene detection and recap generation from raw video using semantic content\r\nanalysis.\r\n Integrated FAISS vector storage for scene embedding retrieval — deployed on HuggingFace Spaces.\r\n",
                     TechStack = "Python, Langchain, RAG, FAISS",
                     GithubLink = "https://github.com/Py-saqlain/Movie_Recap"
 
@@ -50,8 +50,9 @@ namespace Portfilio_Site.Controllers
                 {
                     Id = 5,
                     Title = "HAR Deep Learning Model",
-                    Description = " Trained CNN classifier to recognize 6 human activity classes from image-based sensor data, achieving 87%+ validation\r\naccuracy.\r\n• Reduced overfitting by ~12% through dropout tuning and filter size optimization.\r\n",
-                    TechStack = "Python, TensorFlow, Deep Learning"
+                    Description = " Trained CNN classifier to recognize 6 human activity classes from image-based sensor data, achieving 87%+ validation\r\naccuracy.\r\n Reduced overfitting by ~12% through dropout tuning and filter size optimization.\r\n",
+                    TechStack = "Python, TensorFlow, Deep Learning",
+                    GithubLink = "https://github.com/Py-saqlain/Personal-Chat-Assistant"
                 },
                 
             };
