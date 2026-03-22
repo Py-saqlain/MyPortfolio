@@ -3,6 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 /* Adjust sections to account for the sticky navbar so headers aren't hidden behind it */
 section {
     padding-top: 80px;
