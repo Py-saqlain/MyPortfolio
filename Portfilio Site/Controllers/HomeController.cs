@@ -60,5 +60,9 @@ namespace Portfilio_Site.Controllers
             // 2. Hand this list directly to the View (HTML page)
             return View(myProjects);
         }
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }
