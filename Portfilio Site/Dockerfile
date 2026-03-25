@@ -24,3 +24,19 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "MyPortfolio.dll"]
+
+# Create a non-root user for Hugging Face security
+RUN useradd -m -u 1000 user
+USER user
+ENV HOME=/home/user \
+    PATH=/home/user/.local/bin:$PATH
+WORKDIR $HOME/app
+
+# Copy the published app to the new user's home
+COPY --from=publish --chown=user /app/publish .
+
+# Hugging Face expects port 7860 by default
+EXPOSE 7860
+ENV ASPNETCORE_URLS=http://+:7860
+
+ENTRYPOINT ["dotnet", "MyPortfolio.dll"]
