@@ -1,10 +1,9 @@
 ---
 title: Saqlain Portfolio
-emoji: 🚀
 colorFrom: blue
 colorTo: indigo
 sdk: docker
-pinned: false
+
 ---
 
 # 🚀 Saqlain's Portfolio
@@ -21,9 +20,8 @@ This is a containerized web application designed to be fast, responsive, and eas
 
 ## 📫 Connect With Me
 * **GitHub:** [Py-saqlain](https://github.com/Py-saqlain)
-* **LinkedIn:** [---
+* **LinkedIn:** [](https://www.linkedin.com/in/py-saqlain/)
 title: Saqlain Portfolio
-emoji: 🚀
 colorFrom: blue
 colorTo: indigo
 sdk: docker
@@ -44,4 +42,4 @@ This is a containerized web application designed to be fast, responsive, and eas
 
 ## 📫 Connect With Me
 * **GitHub:** [Py-saqlain](https://github.com/Py-saqlain)
-* **LinkedIn:** [https://www.linkedin.com/in/py-saqlain/]
+* **LinkedIn:** [](https://www.linkedin.com/in/py-saqlain/)
