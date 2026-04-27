@@ -3,14 +3,13 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /* Adjust sections to account for the sticky navbar so headers aren't hidden behind it */
 section {
     padding-top: 80px;
-    min-height: 100vh; /* Make each section take up at least full screen height for now */
+    min-height: 100vh;
 }
 
-/* Make custom scrollbar for dark mode (optional but looks professional) */
+/* Make custom scrollbar for dark mode */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -33,7 +32,7 @@ section {
 
     50% {
         border-color: rgba(13, 202, 240, 1);
-        box-shadow: 0 0 20px rgba(13, 202, 240, 0.4); /* Cyan glow */
+        box-shadow: 0 0 20px rgba(13, 202, 240, 0.4);
     }
 
     100% {
@@ -44,12 +43,11 @@ section {
 
 /* 2. Apply it to your skill cards */
 .skill-card {
-    /* 3s duration, runs infinitely, smoothly alternating */
     animation: breathingGlow 3s infinite ease-in-out;
-    transition: transform 0.3s ease; /* Keep the smooth lift for hover */
+    transition: transform 0.3s ease;
 }
 
-/* Optional: Stagger the running animation so they don't all pulse at the exact same time! */
+/* Stagger the running animation */
 .col-md-4:nth-child(2) .skill-card {
     animation-delay: 0.5s;
 }
@@ -72,132 +70,54 @@ section {
 
 /* 3. Make it pop even more when the user hovers over it */
 .skill-card:hover {
-    transform: translateY(-10px) scale(1.02); /* Lifts and slightly enlarges */
-    animation-play-state: paused; /* Pauses the breathing while hovering */
-    box-shadow: 0 15px 30px rgba(13, 202, 240, 0.8) !important; /* Maximum glow */
-}
-/* --- FALLING CIRCLES BACKGROUND --- */
-.animated-bg {
-    position: relative;
-    overflow: hidden; /* Keeps circles inside their specific section */
+    transform: translateY(-10px) scale(1.02);
+    animation-play-state: paused;
+    box-shadow: 0 15px 30px rgba(13, 202, 240, 0.8) !important;
 }
 
-.circles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: 0; /* Keeps them behind your cards */
-    pointer-events: none; /* Stops them from blocking clicks */
+.hover-scale:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(23, 162, 184, 0.2) !important;
 }
 
-    .circles li {
-        position: absolute;
-        display: block;
-        list-style: none;
-        width: 20px;
-        height: 20px;
-        background: rgba(13, 202, 240, 0.4); /* Faint cyan color */
-        border-radius: 50%;
-        animation: fall 15s linear infinite;
-        top: -150px; /* Start above the section */
-    }
-
-        /* Stagger the sizes, positions, and falling speeds */
-        .circles li:nth-child(1) {
-            left: 25%;
-            width: 80px;
-            height: 80px;
-            animation-delay: 0s;
-            animation-duration: 20s;
-        }
-
-        .circles li:nth-child(2) {
-            left: 10%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 2s;
-            animation-duration: 12s;
-        }
-
-        .circles li:nth-child(3) {
-            left: 70%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 4s;
-        }
-
-        .circles li:nth-child(4) {
-            left: 40%;
-            width: 60px;
-            height: 60px;
-            animation-delay: 0s;
-            animation-duration: 18s;
-        }
-
-        .circles li:nth-child(5) {
-            left: 65%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 0s;
-        }
-
-        .circles li:nth-child(6) {
-            left: 75%;
-            width: 110px;
-            height: 110px;
-            animation-delay: 3s;
-            animation-duration: 25s;
-        }
-
-        .circles li:nth-child(7) {
-            left: 35%;
-            width: 150px;
-            height: 150px;
-            animation-delay: 7s;
-        }
-
-        .circles li:nth-child(8) {
-            left: 50%;
-            width: 25px;
-            height: 25px;
-            animation-delay: 15s;
-            animation-duration: 45s;
-        }
-
-        .circles li:nth-child(9) {
-            left: 20%;
-            width: 15px;
-            height: 15px;
-            animation-delay: 2s;
-            animation-duration: 35s;
-        }
-
-        .circles li:nth-child(10) {
-            left: 85%;
-            width: 150px;
-            height: 150px;
-            animation-delay: 0s;
-            animation-duration: 11s;
-        }
-
-@keyframes fall {
-    0% {
-        transform: translateY(-100px) scale(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(1000px) scale(1.5);
-        opacity: 0;
-    }
-}
-
-/* Make sure your section content stays above the circles */
+/* Make sure your section content stays above the background */
 .container {
     position: relative;
     z-index: 1;
+}
+
+
+/* ========================================= */
+/* --- FALLING TECH LOGOS BACKGROUND --- */
+/* ========================================= */
+
+.tech-fall-container {
+    position: fixed; /* Keeps them falling across the whole page */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.falling-icon {
+    position: absolute;
+    top: -10%;
+    color: rgba(23, 162, 184, 0.6); /* Nice visible cyan color */
+    font-size: 5rem;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
 }

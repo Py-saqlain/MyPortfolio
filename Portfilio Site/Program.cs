@@ -20,7 +20,14 @@ namespace Portfilio_Site
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            var provider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
+            // Explicitly allow .pdf files
+            provider.Mappings[".pdf"] = "application/pdf";
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                ContentTypeProvider = provider
+            });
 
             app.UseRouting();
 

@@ -31,10 +31,10 @@ namespace Portfilio_Site.Controllers
                 new ProjectModel
                 {
                     Id = 3,
-                    Title = "Timely E-commerce App",
-                    Description = "A fast and responsive e-commerce platform built for modern online Watches shopping,implemented with MVC strcture, HTML5, Bootstrap and SignalR for live notifications",
+                    Title = "Trendora E-commerce App",
+                    Description = "A fast and responsive e-commerce platform built for modern online Clothing shopping,implemented with MVC strcture, HTML5, Bootstrap and SignalR for live notifications",
                     TechStack = "C#, ASP.NET Core MVC",
-                    GithubLink = "https://github.com/Py-saqlain/Movie_Recap"
+                    GithubLink = "https://github.com/Py-saqlain/Trendora-.NET-Project"
 
                 },
                 new ProjectModel
@@ -49,6 +49,15 @@ namespace Portfilio_Site.Controllers
                 new ProjectModel
                 {
                     Id = 5,
+                    Title = "FoodFrenzy",
+                    Description = "A fully functional Online Food Delivery Application developed with ASP.NET MVC 5, incorporating the Code-First approach, C#, and Bootstrap 5. This web application implements MVC architecture to separate business logic from UI, featuring Entity Framework for data management, Identity for security, and AJAX for a dynamic, non-refreshing shopping cart experience.",
+                    TechStack = "Python, TensorFlow, Deep Learning",
+                    GithubLink = "https://github.com/Py-saqlain/Personal-Chat-Assistant"
+                },
+
+                new ProjectModel
+                {
+                    Id = 6,
                     Title = "HAR Deep Learning Model",
                     Description = " Trained CNN classifier to recognize 6 human activity classes from image-based sensor data, achieving 87%+ validation\r\naccuracy.\r\n Reduced overfitting by ~12% through dropout tuning and filter size optimization.\r\n",
                     TechStack = "Python, TensorFlow, Deep Learning",
