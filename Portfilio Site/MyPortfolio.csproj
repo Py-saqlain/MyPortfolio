@@ -7,4 +7,10 @@
     <RootNamespace>Portfilio_Site</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\Resume_Saqlain_Rashid.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

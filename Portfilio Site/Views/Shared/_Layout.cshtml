@@ -29,7 +29,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
@@ -40,12 +40,15 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#experience-education">Certificates & Experience</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     @* Download resume *@
-                    <li class="nav-item ms-md-3 mt-2 mt-md-0">
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
                         <button type="button" class="btn btn-outline-info rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#resumeModal">
-                            <i class="bi bi-file-earmark-person me-2"></i> Resume
+                            <i class="fas fa-file-alt me-2"></i> Resume
                         </button>
                     </li>
                 </ul>
@@ -67,13 +70,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000, // Animation takes 1 second
-            once: true      // Animation happens only once when scrolling down
+            duration: 1000,
+            once: true
         });
     </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 
+    <!-- Resume Modal Options Window -->
     <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-light border-info shadow-lg" style="border-width: 2px; border-radius: 15px;">
@@ -89,11 +93,12 @@
                     <p class="text-secondary mb-4 fs-5">How would you like to access my resume?</p>
 
                     <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                        <a href="/My_Resume.pdf" target="_blank" class="btn btn-outline-info rounded-pill px-4 py-2 fw-bold w-100">
+                        <!-- Updated the href paths to match your renamed file exactly -->
+                        <a href="@Url.Content("~/Resume_Saqlain_Rashid.pdf?v=2")" target="_blank" class="btn btn-outline-info rounded-pill px-4 py-2 fw-bold w-100">
                             <i class="fas fa-eye me-2"></i> View in Browser
                         </a>
 
-                        <a href="/My_Resume.pdf" download="Saqlain_Rashid_Resume.pdf" class="btn btn-info text-dark rounded-pill px-4 py-2 fw-bold w-100 shadow-sm">
+                        <a href="@Url.Content("~/Resume_Saqlain_Rashid.pdf?v=2")" download="Saqlain_Rashid_Resume.pdf" class="btn btn-info text-dark rounded-pill px-4 py-2 fw-bold w-100 shadow-sm">
                             <i class="fas fa-download me-2"></i> Download PDF
                         </a>
                     </div>

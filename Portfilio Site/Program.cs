@@ -15,15 +15,16 @@ namespace Portfilio_Site
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
+
+            // 1. Configure the MIME map properly
             var provider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
-            // Explicitly allow .pdf files
             provider.Mappings[".pdf"] = "application/pdf";
 
+            // 2. Clear fix: Let UseStaticFiles target the true server environment paths safely
             app.UseStaticFiles(new StaticFileOptions
             {
                 ContentTypeProvider = provider

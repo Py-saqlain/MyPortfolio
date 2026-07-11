@@ -52,6 +52,7 @@
 <section id="about" class="py-5 bg-dark text-light border-top border-secondary min-vh-100 d-flex align-items-center">
     <div class="container py-5" data-aos="fade-up">
 
+        <!-- Title Row -->
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="display-5 fw-bold text-white mb-3">About <span class="text-info">Me</span></h2>
@@ -59,23 +60,27 @@
             </div>
         </div>
 
+        <!-- Content Row -->
         <div class="row gy-5 align-items-center">
+
+            <!-- Left Column: Heavy AI Copy -->
             <div class="col-lg-7 pe-lg-5">
-                <h3 class="h4 text-info mb-3">Software Engineer & AI Enthusiast</h3>
+                <h3 class="h4 text-info mb-3">AI Engineer & Intelligent Systems Specialist</h3>
 
                 <p class="lead" style="line-height: 1.8; font-size: 1.1rem;">
-                    I am an undergraduate student (Batch 2027) at <strong>Punjab University College of Information Technology (PUCIT)</strong>. My journey in tech began with a deep curiosity about how things work behind the scenes, which quickly evolved into a passion for building robust, scalable systems.
+                    I am an undergraduate student (Batch 2027) at <strong>Punjab University College of Information Technology (PUCIT)</strong>. My engineering journey is driven by a passion for bridging the gap between high-performance backend layers and sophisticated artificial intelligence.
                 </p>
 
                 <p style="line-height: 1.8; color: #adb5bd;">
-                    Today, my expertise lies at the intersection of modern backend architecture and intelligent data systems. I specialize in developing high-performance APIs using <strong>.NET Core (C#)</strong>, automating deployments with <strong>Docker & GitHub Actions</strong>, and integrating <strong>Machine Learning & Generative AI</strong> to create forward-thinking solutions.
+                    Today, my core focus revolves around designing multimodal AI architectures and streaming data pipelines. I specialize in building ultra-low latency voice agents utilizing <strong>LiveKit, Groq, Cartesia, and ElevenLabs APIs</strong>, as well as developing advanced <strong>RAG applications</strong> powered by <strong>LangChain, LangGraph, and Vector Embeddings</strong> for modern contextual retrieval.
                 </p>
 
                 <p style="line-height: 1.8; color: #adb5bd;">
-                    When I am not containerizing microservices or fine-tuning models, I am constantly exploring new ways to write clean, efficient code that solves real-world problems.
+                    When I am not orchestrating scalable containerized microservices via <strong>Docker & GitHub Actions</strong>, I am busy developing robust micro-services with <strong>.NET Core (C#) & FastAPI</strong> or tuning predictive architectures with <strong>TensorFlow and scikit-learn</strong>.
                 </p>
             </div>
 
+            <!-- Right Column: Re-mapped Profile Card -->
             <div class="col-lg-5">
                 <div class="card bg-transparent border-info shadow-lg h-100 rounded-4" style="border-width: 2px;">
                     <div class="card-body p-4 p-md-5">
@@ -89,16 +94,20 @@
                                 <span class="text-light text-end">PUCIT (2027)</span>
                             </li>
                             <li class="mb-3 border-bottom border-secondary pb-3 d-flex justify-content-between">
-                                <span class="text-info fw-bold"><i class="fas fa-code me-2"></i> Backend</span>
-                                <span class="text-light text-end">C#, ASP.NET Core</span>
+                                <span class="text-info fw-bold"><i class="fas fa-brain me-2"></i> AI / ML Stack</span>
+                                <span class="text-light text-end">Gen AI, RAG, Vector Data</span>
                             </li>
                             <li class="mb-3 border-bottom border-secondary pb-3 d-flex justify-content-between">
-                                <span class="text-info fw-bold"><i class="fas fa-server me-2"></i> DevOps</span>
+                                <span class="text-info fw-bold"><i class="fas fa-microphone-alt me-2"></i> Voice APIs</span>
+                                <span class="text-light text-end">LiveKit, Cartesia</span>
+                            </li>
+                            <li class="mb-3 border-bottom border-secondary pb-3 d-flex justify-content-between">
+                                <span class="text-info fw-bold"><i class="fas fa-server me-2"></i> Backend</span>
+                                <span class="text-light text-end">C# .NET, FastAPI</span>
+                            </li>
+                            <li class="mb-3 border-bottom border-secondary pb-3 d-flex justify-content-between">
+                                <span class="text-info fw-bold"><i class="fas fa-cubes me-2"></i> DevOps</span>
                                 <span class="text-light text-end">Docker, CI/CD</span>
-                            </li>
-                            <li class="mb-3 border-bottom border-secondary pb-3 d-flex justify-content-between">
-                                <span class="text-info fw-bold"><i class="fas fa-brain me-2"></i> AI / ML</span>
-                                <span class="text-light text-end">Gen AI, Python</span>
                             </li>
                             <li class="pt-2 d-flex justify-content-between">
                                 <span class="text-info fw-bold"><i class="fas fa-map-marker-alt me-2"></i> Location</span>
@@ -114,75 +123,117 @@
 </section>
 @* skills *@
 
-<section id="skills" class="py-5 bg-dark text-light border-top border-secondary min-vh-100 d-flex align-items-center">
-    <div class="container py-5">
+<!-- Custom Style for the Hover Glow Effect -->
+<style>
+    .skill-card {
+        transition: all 0.3s ease-in-out !important;
+        border-color: rgba(13, 202, 240, 0.2) !important;
+    }
 
-        <div class="row mb-5" data-aos="fade-up">
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: #0dcaf0 !important;
+            box-shadow: 0 10px 30px rgba(13, 202, 240, 0.25) !important;
+            background-color: #212529 !important;
+        }
+
+        .skill-card i {
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover i {
+            transform: scale(1.1);
+        }
+</style>
+
+<section id="skills" class="py-5 bg-dark text-light border-top border-secondary">
+    <div class="container py-5" data-aos="fade-up">
+
+        <!-- Matches your exact 'My Projects' heading style -->
+        <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="display-5 fw-bold text-white mb-3">My <span class="text-info">Skills</span></h2>
                 <div class="mx-auto bg-info" style="height: 4px; width: 60px; border-radius: 2px;"></div>
             </div>
         </div>
 
-        <div class="row text-center gy-4">
+        <div class="row g-4">
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="card bg-transparent border-info h-100 shadow-lg rounded-4 hover-scale" style="border-width: 2px; transition: transform 0.3s ease;">
-                    <div class="card-body p-4">
-                        <i class="fas fa-robot text-info mb-3" style="font-size: 2.5rem;"></i>
-                        <h4 class="card-title text-white mb-3 fw-bold">Generative AI & LLMs</h4>
-                        <p class="card-text text-secondary" style="line-height: 1.6;">LangChain, LangGraph, RAG, OpenAI API, Prompt Engineering, FAISS</p>
+            <!-- 1. Generative AI & LLMs -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-center p-4 skill-card">
+                    <div class="mb-3">
+                        <i class="fas fa-robot fa-3x text-info"></i>
                     </div>
+                    <h4 class="fw-bold text-light">Generative AI & LLMs</h4>
+                    <p class="text-secondary mt-3">
+                        LangChain, LangGraph, RAG, OpenAI API, Groq, Prompt Engineering, FAISS, Vector Embeddings
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card bg-transparent border-info h-100 shadow-lg rounded-4 hover-scale" style="border-width: 2px; transition: transform 0.3s ease;">
-                    <div class="card-body p-4">
-                        <i class="fas fa-network-wired text-info mb-3" style="font-size: 2.5rem;"></i>
-                        <h4 class="card-title text-white mb-3 fw-bold">Deep Learning</h4>
-                        <p class="card-text text-secondary" style="line-height: 1.6;">TensorFlow, CNNs, LSTMs, GRUs, scikit-learn, Time-Series</p>
+            <!-- 2. Deep Learning -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-center p-4 skill-card">
+                    <div class="mb-3">
+                        <i class="fas fa-network-wired fa-3x text-info"></i>
                     </div>
+                    <h4 class="fw-bold text-light">Deep Learning</h4>
+                    <p class="text-secondary mt-3">
+                        TensorFlow, CNNs, LSTMs, GRUs, Keras, Time-Series
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card bg-transparent border-info h-100 shadow-lg rounded-4 hover-scale" style="border-width: 2px; transition: transform 0.3s ease;">
-                    <div class="card-body p-4">
-                        <i class="fas fa-server text-info mb-3" style="font-size: 2.5rem;"></i>
-                        <h4 class="card-title text-white mb-3 fw-bold">Backend & APIs</h4>
-                        <p class="card-text text-secondary" style="line-height: 1.6;">.NET Core 8, C#, ASP.NET, FastAPI, RESTful APIs, SQL</p>
+            <!-- 3. Backend & APIs -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-center p-4 skill-card">
+                    <div class="mb-3">
+                        <i class="fas fa-server fa-3x text-info"></i>
                     </div>
+                    <h4 class="fw-bold text-light">Backend & APIs</h4>
+                    <p class="text-secondary mt-3">
+                        .NET Core 8, C#, ASP.NET, FastAPI, RESTful APIs, SQL
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card bg-transparent border-info h-100 shadow-lg rounded-4 hover-scale" style="border-width: 2px; transition: transform 0.3s ease;">
-                    <div class="card-body p-4">
-                        <i class="fas fa-code text-info mb-3" style="font-size: 2.5rem;"></i>
-                        <h4 class="card-title text-white mb-3 fw-bold">Languages</h4>
-                        <p class="card-text text-secondary" style="line-height: 1.6;">Python, C#, C++, C, JavaScript, SQL</p>
+            <!-- 4. Languages -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-center p-4 skill-card">
+                    <div class="mb-3">
+                        <i class="fas fa-code fa-3x text-info"></i>
                     </div>
+                    <h4 class="fw-bold text-light">Languages</h4>
+                    <p class="text-secondary mt-3">
+                        Python, C#, C++, C, JavaScript, SQL
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="card bg-transparent border-info h-100 shadow-lg rounded-4 hover-scale" style="border-width: 2px; transition: transform 0.3s ease;">
-                    <div class="card-body p-4">
-                        <i class="fas fa-laptop-code text-info mb-3" style="font-size: 2.5rem;"></i>
-                        <h4 class="card-title text-white mb-3 fw-bold">Frontend</h4>
-                        <p class="card-text text-secondary" style="line-height: 1.6;">HTML5, CSS3, Bootstrap 5, JavaScript, Responsive Design</p>
+            <!-- 5. Machine Learning -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-center p-4 skill-card">
+                    <div class="mb-3">
+                        <i class="fas fa-brain fa-3x text-info"></i>
                     </div>
+                    <h4 class="fw-bold text-light">Machine Learning</h4>
+                    <p class="text-secondary mt-3">
+                        scikit-learn, Feature Engineering, LiveKit, Cartesia, ElevenLabs APIs, Predictive Modeling
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="card bg-transparent border-info h-100 shadow-lg rounded-4 hover-scale" style="border-width: 2px; transition: transform 0.3s ease;">
-                    <div class="card-body p-4">
-                        <i class="fas fa-box-open text-info mb-3" style="font-size: 2.5rem;"></i>
-                        <h4 class="card-title text-white mb-3 fw-bold">DevOps & Tools</h4>
-                        <p class="card-text text-secondary" style="line-height: 1.6;">Docker, GitHub Actions (CI/CD), Git, Streamlit, HuggingFace</p>
+            <!-- 6. DevOps & Tools -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-center p-4 skill-card">
+                    <div class="mb-3">
+                        <i class="fas fa-box-open fa-3x text-info"></i>
                     </div>
+                    <h4 class="fw-bold text-light">DevOps & Tools</h4>
+                    <p class="text-secondary mt-3">
+                        Docker, GitHub Actions (CI/CD), Git, Streamlit, HuggingFace
+                    </p>
                 </div>
             </div>
 
@@ -219,10 +270,22 @@
                             <p class="card-text text-secondary mt-2 flex-grow-1" style="line-height: 1.6;">@project.Description</p>
                         </div>
 
+                        <!-- Card Footer with Dynamic Buttons -->
                         <div class="card-footer bg-transparent border-0 p-4 pt-0 mt-auto">
-                            <a href="@project.GithubLink" target="_blank" class="btn btn-outline-info w-100 rounded-pill fw-bold shadow-sm">
-                                <i class="fab fa-github fa-lg me-2"></i> View Code
-                            </a>
+                            <div class="d-flex gap-2">
+                                <!-- GitHub Code Button (Always shows) -->
+                                <a href="@project.GithubLink" target="_blank" class="btn btn-outline-info w-100 rounded-pill fw-bold shadow-sm">
+                                    <i class="fab fa-github fa-lg me-1"></i> Code
+                                </a>
+
+                                <!-- Conditional Live Demo Button -->
+                                @if (!string.IsNullOrEmpty(project.LiveUrl))
+                                {
+                                    <a href="@project.LiveUrl" target="_blank" class="btn btn-info text-dark w-100 rounded-pill fw-bold shadow-sm">
+                                        <i class="fas fa-external-link-alt me-1"></i> Live
+                                    </a>
+                                }
+                            </div>
                         </div>
 
                     </div>
@@ -231,6 +294,101 @@
         </div>
     </div>
 </section>
+
+ @* Certificate & internships *@
+<!-- Custom Style for Split Screen Layout -->
+<style>
+    .split-card {
+        transition: all 0.3s ease-in-out !important;
+        border-color: rgba(13, 202, 240, 0.15) !important;
+        background-color: rgba(33, 37, 41, 0.5) !important;
+    }
+
+        .split-card:hover {
+            transform: translateY(-3px);
+            border-color: #0dcaf0 !important;
+            box-shadow: 0 8px 20px rgba(13, 202, 240, 0.1) !important;
+        }
+
+    .clickable-card {
+        text-decoration: none;
+        display: block;
+    }
+
+        .clickable-card:hover .card-title-hover {
+            color: #0dcaf0 !important;
+        }
+</style>
+
+<section id="experience-education" class="py-5 bg-dark text-light border-top border-secondary">
+    <div class="container py-5">
+        <div class="row g-5">
+
+            <!-- LEFT COLUMN: CERTIFICATIONS -->
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="bg-info text-dark rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                        <i class="fas fa-certificate fa-lg"></i>
+                    </div>
+                    <h3 class="fw-bold text-white mb-0">Certifications</h3>
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+                    @if (ViewBag.Certifications != null)
+                    {
+                        foreach (var cert in (List<Portfilio_Site.Models.CertificationModel>)ViewBag.Certifications)
+                        {
+                            <a href="@cert.CredentialUrl" target="_blank" class="clickable-card">
+                                <div class="card p-4 split-card border rounded-4 h-100">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="fw-bold text-white card-title-hover mb-0 transition-all">@cert.Title</h5>
+                                        <i class="fas fa-external-link-alt text-secondary fa-sm ms-2 mt-1"></i>
+                                    </div>
+                                    <p class="text-info small mb-0 fw-semibold">
+                                        <i class="fas fa-university me-1 opacity-75"></i> @cert.IssuingOrganization
+                                    </p>
+                                </div>
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: INTERNSHIPS -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="bg-info text-dark rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                        <i class="fas fa-briefcase fa-lg"></i>
+                    </div>
+                    <h3 class="fw-bold text-white mb-0">Internships</h3>
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+                    @if (ViewBag.Internships != null)
+                    {
+                        foreach (var intern in (List<Portfilio_Site.Models.InternshipModel>)ViewBag.Internships)
+                        {
+                            <div class="card p-4 split-card border rounded-4">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                                    <h5 class="fw-bold text-white mb-0">@intern.Role</h5>
+                                    <span class="badge bg-dark text-info border border-info px-2 py-1" style="font-size: 0.8rem;">
+                                        <i class="far fa-calendar-alt me-1"></i> @intern.Duration
+                                    </span>
+                                </div>
+                                <p class="text-secondary fw-semibold small mb-2">
+                                    <i class="fas fa-building me-1 text-info opacity-75"></i> @intern.Company
+                                </p>
+                                <p class="text-secondary mb-0 small" style="line-height: 1.5;">@intern.Description</p>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 
 @* CONTACT *@
