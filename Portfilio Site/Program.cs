@@ -10,6 +10,7 @@ namespace Portfilio_Site
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+            app.UseDeveloperExceptionPage();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -18,7 +19,7 @@ namespace Portfilio_Site
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             // 1. Configure the MIME map properly
             var provider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
